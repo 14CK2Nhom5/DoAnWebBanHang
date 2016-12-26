@@ -49,3 +49,24 @@ Route::get('/Product', function () {
 Route::get('/404', function () {
     return view('views.404');
 });
+Route::get('/Rolex', function () {
+    return view('views.rolex');
+});
+Route::get('/Casio', function () {
+    return view('views.casio');
+});
+Route::get('/Zenith', function () {
+    return view('views.zenith');
+});
+Route::get('/Longines', function () {
+    return view('views.longines');
+});
+Route::get('/Oris', function () {
+    return view('views.oris');
+});
+Route::get('/Orient', function () {
+    return view('views.orient');
+});
+Route::get('/Sarcar', function () {
+    return view('views.sarcar');
+});

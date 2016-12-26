@@ -14,6 +14,7 @@
 			$tenthuonghieu = trim($row['tenthuonghieu']);		
 			$gioithieu	=trim($row['gioithieu']);	
 			$soluong	=trim($row['sl']);	
+			$tenth	=trim($row['tenth']);	
 			$hinhanh=trim($row['hinhanhthuonghieu']);		
 		?>
           <div class="brand_box">
@@ -21,12 +22,12 @@
 				 <img src="<?php echo $hinhanh ?>" alt=""/>
 			 </div>
 		     <div class="middle-side col-xs-12 col-sm-5">
-		     	<h4><a href="Rolex"><?php echo $tenthuonghieu ?></a></h4>
+		     	<h4><a href="<?php echo $tenth ?>"><?php echo $tenthuonghieu ?></a></h4>
 		     	<p><?php echo $gioithieu ?></p>
 			 </div>
 			 <div class="right-side col-xs-12 col-sm-4">
-			 	<p><a href="#"><?php echo $soluong , " sản phẩm" ?></a></p>
-			    <a href="#" class="btn btn1 btn-primary btn-normal btn-inline " target="_self">View Products</a>     
+			 	<p><a href="<?php echo $tenth ?>"><?php echo $soluong , " sản phẩm" ?></a></p>
+			    <a href="<?php echo $tenth ?>" class="btn btn1 btn-primary btn-normal btn-inline " target="_self">View Products</a>     
 			 </div>
 			 <div class="clearfix"> </div>
 		  </div>
