@@ -6,13 +6,14 @@
       <div class="col-md-9 single_top">
       	 <h1 class="page-heading product-listing">
 			Thương Hiệu
-         </h1>
+         </h1>	
          <?php
    		$connect = connect();
-   		$result = mysqli_query($connect, "SELECT * from thuonghieu");
-   		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
+   		$result = mysqli_query($connect, "SELECT th.*,count(*) sl from sanpham sp,thuonghieu th where sp.thuonghieu = th.mathuonghieu  group by thuonghieu");
+   		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 			$tenthuonghieu = trim($row['tenthuonghieu']);		
 			$gioithieu	=trim($row['gioithieu']);	
+			$soluong	=trim($row['sl']);	
 			$hinhanh=trim($row['hinhanhthuonghieu']);		
 		?>
           <div class="brand_box">
@@ -24,7 +25,7 @@
 		     	<p><?php echo $gioithieu ?></p>
 			 </div>
 			 <div class="right-side col-xs-12 col-sm-4">
-			 	<p><a href="#">1 sản phẩm</a></p>
+			 	<p><a href="#"><?php echo $soluong , " sản phẩm" ?></a></p>
 			    <a href="#" class="btn btn1 btn-primary btn-normal btn-inline " target="_self">View Products</a>     
 			 </div>
 			 <div class="clearfix"> </div>
