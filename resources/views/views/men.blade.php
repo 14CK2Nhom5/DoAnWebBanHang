@@ -1,17 +1,20 @@
 @extends('Layout.master')
-
 @section('noidung')
 <div class="pro">   
    <ul class="products">
    	<?php
-   		$connect = connect();
-   		$result = mysqli_query($connect, "SELECT * from sanpham sp,thuonghieu th where phai = 'Nam' and sp.thuonghieu = th.mathuonghieu");
-   		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
-			$tensp = trim($row['tensp']);		
-			$gia	=trim($row['giatien']);	
-			$donvi=trim($row['donvi']);		
-			$hinhanh=trim($row['hinhanh']);		
-			$thuonghieu = trim($row['tenthuonghieu']);
+	   use Illuminate\Support\Facades\DB;
+	   $results=DB::table('sanpham')
+			   ->join('thuonghieu', 'sanpham.thuonghieu', '=', 'thuonghieu.mathuonghieu')
+			   ->where('sanpham.phai','=', 'Nam')
+			   ->select('*')
+			   ->get();
+	   foreach ($results as $result){
+			$tensp = $result->tensp;
+			$gia	=$result->giatien;
+			$donvi=$result->donvi;
+			$hinhanh=$result->hinhanh;
+			$thuonghieu = $result->tenthuonghieu;
 	?>
 		<li class="simpleCart_shelfItem">
 			<a class="cbp-vm-image" href="single">
@@ -35,7 +38,6 @@
 		</li>	
 	<?php 
 		}
-   		mysqli_close($connect);
 	?>	
 	<!-- more list items -->
 </ul>
@@ -43,12 +45,5 @@
                 <script src="js/classie.js" type="text/javascript"></script>
            
 </div>
-<?php
-	function connect(){	
-		$connect = mysqli_connect("localhost", "root", "") or die(mysql_error());
-		mysqli_set_charset($connect, 'utf8');
-		mysqli_select_db($connect, "watches") or die(mysql_error());
-		return $connect;
-	}
-?>
+
 @stop
