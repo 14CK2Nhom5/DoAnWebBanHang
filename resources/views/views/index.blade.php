@@ -5,23 +5,23 @@
         <div class="container">
             <ul class="content-home">
                 <li class="col-sm-4">
-                    <a href="Single" class="item-link" title="">
+                    <a href="ThoiTrang" class="item-link" title="">
                         <div class="bannerBox">
                             <img src="images/w1.jpg" class="item-img" title="" alt="" width="100%" height="100%">
                             <div class="item-html">
                                 <h3>Phong<span>Cách</span></h3>
-                                <p>Tôn lên vẻ sang trọng và lịch lãm</p>
+                                <p>Dấu ấn trong mắt mọi người</p>
                                 <button>Mua ngay!</button>
                             </div>
                         </div>
                     </a>
                 </li>
                 <li class="col-sm-4">
-                    <a href="Single" class="item-link" title="">
+                    <a href="SangTrong" class="item-link" title="">
                         <div class="bannerBox">
                             <img src="images/w3.jpg" class="item-img" title="" alt="" width="100%" height="100%">
                             <div class="item-html">
-                                <h3>Thể<span>Thao</span></h3>
+                                <h3>Sang<span>Trọng</span></h3>
                                 <p>Tôn lên vẻ sang trọng và lịch lãm</p>
                                 <button>Mua ngay!</button>
                             </div>
@@ -29,12 +29,12 @@
                     </a>
                 </li>
                 <li class="col-sm-4">
-                    <a href="Single" class="item-link" title="">
+                    <a href="TreTrung" class="item-link" title="">
                         <div class="bannerBox">
                             <img src="images/w2.jpg" class="item-img" title="" alt="" width="100%" height="100%">
                             <div class="item-html">
-                                <h3>Năng<span>Động</span></h3>
-                                <p>Tôn lên vẻ sang trọng và lịch lãm</p>
+                                <h3>Trẻ<span>Trung</span></h3>
+                                <p>Nhiệt huyết và đam mê tuổi trẻ</p>
                                 <button>Mua ngay!</button>
                             </div>
                         </div>
@@ -59,7 +59,7 @@
                                 <span>Đỉnh cao</span>
                             </a>
                             <div class="lb-overlay" id="image-1">
-                                <a href="#page" class="lb-close">x Đóng</a>
+                                <a href="#page" class="lb-close">Đóng</a>
                                 <img src="images/g1.jpg"  class="img-responsive" alt="image01"/>
                                 <div></div>
                             </div>
@@ -72,7 +72,7 @@
                             <div class="lb-overlay" id="image-2">
                                 <img src="images/g2.jpg"  class="img-responsive" alt="image02"/>
                                 <div></div>
-                                <a href="#page" class="lb-close">x Đóng</a>
+                                <a href="#page" class="lb-close">Đóng</a>
                             </div>
                         </li>
                         <li>
@@ -84,7 +84,7 @@
                                 <img src="images/g3.jpg"  class="img-responsive" alt="image03"/>
                                 <div>
                                 </div>
-                                <a href="#page" class="lb-close">x Đóng</a>
+                                <a href="#page" class="lb-close">Đóng</a>
                             </div>
                         </li>
                         <li>

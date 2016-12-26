@@ -1193,7 +1193,7 @@ ul.women_pagenation li a:hover{
 }
 .product_container h4{
 	text-transform: uppercase;
-	font-size:1em;
+	font-size:2em;
 	color:#000;
 	margin-bottom: 3px;
 }
@@ -1326,11 +1326,11 @@ img.zoom-img:hover {
 .span_2_of_a1 h1 {
 	color: #333;
 	text-transform: uppercase;
-	font-size: 1.7em;
+	font-size: 3em;
 }
 .price_single {
-	font-size: 1.3em;
-	margin: 0.5em 0 1.5em;
+	font-size: 2em;
+	margin: 0.5em 0 1em;
 }
 span.reducedfrom {
 	text-decoration: line-through;
@@ -1415,6 +1415,7 @@ ul.product-qty {
 	list-style:none;
 }
 .wish-list li {
+	font-size: 3em;
 	display: inline-block;
 	margin-right: 45px;
 }
@@ -1423,7 +1424,6 @@ ul.product-qty {
 }
 .wish-list li a {
 	color:#FFB87B;
-	font-size: 0.8125em;
 	padding-left: 22px;
 	text-decoration: underline;
 }
@@ -1775,13 +1775,13 @@ a.btn.btn1.btn-primary.btn-normal.btn-inline {
 	margin-bottom: 2em;
 }
 .grid_1 h1{
-	font-size:2em;
+	font-size: 3em;
 	color:#000;
 	text-transform:uppercase;
     margin-bottom:1em;
 }
 .grid_1 p{
-	font-size:0.95em;
+	font-size:1.5em;
 	color:#999;
 	line-height:1.8em;
 }
@@ -2682,7 +2682,7 @@ ul.breadcrumbs li, ul.previous li a{
   margin: 0.5em 0 1em;
 }
 h2.quick {
-  font-size: 1em;
+  font-size: 3em;
 }
 .wish-list {
   padding: 6px 0;

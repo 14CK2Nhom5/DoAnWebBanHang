@@ -6,7 +6,8 @@
    	<?php
    		$connect = connect();
    		$result = mysqli_query($connect, "SELECT * from sanpham sp, thuonghieu th where thuonghieu = 'Oris'and sp.thuonghieu = th.mathuonghieu");
-   		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
+   		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+   			$idsp = trim($row['masp']); 
 			$tensp = trim($row['tensp']);		
 			$gia	=trim($row['giatien']);	
 			$donvi=trim($row['donvi']);		
@@ -14,7 +15,7 @@
 			$thuonghieu = trim($row['tenthuonghieu']);
 	?>
 		<li class="simpleCart_shelfItem">
-			<a class="cbp-vm-image" href="single">
+			<a class="cbp-vm-image" href="single?id=<?php echo $idsp ?>">
 			  <div class="view view-first">
 	   		  <div class="inner_content clearfix">
 				<div class="product_image">

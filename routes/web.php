@@ -70,3 +70,12 @@ Route::get('/Orient', function () {
 Route::get('/Sarcar', function () {
     return view('views.sarcar');
 });
+Route::get('/ThoiTrang', function () {
+    return view('views.thoitrang');
+});
+Route::get('/SangTrong', function () {
+    return view('views.sangtrong');
+});
+Route::get('/TreTrung', function () {
+    return view('views.tretrung');
+});

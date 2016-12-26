@@ -1,9 +1,3 @@
-<!--A Design by W3layouts
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -65,7 +59,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="search-box">
                     <div id="sb-search" class="sb-search">
                         <form>
-                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
+                            <input class="sb-search-input" placeholder="Tên sản phẩm tìm kiếm ..." type="search" name="search" id="search">
                             <input class="sb-search-submit" type="submit" value="">
                             <span class="sb-icon-search"> </span>
                         </form>
@@ -167,7 +161,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="clearfix"></div>
         <div class="copy">
 
-            <p> &copy; 2015 Watches. All Rights Reserved | Design by <a href="http://w3layouts.com/" target="_blank">W3layouts</a></p>
+            <p> &copy; 2016 Watches. All Rights Reserved | Design by Nhóm 5</p>
         </div>
     </div>
 </div>

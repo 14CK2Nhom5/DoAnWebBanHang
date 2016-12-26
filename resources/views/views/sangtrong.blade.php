@@ -5,7 +5,7 @@
    <ul class="products">
    	<?php
    		$connect = connect();
-   		$result = mysqli_query($connect, "SELECT * from sanpham sp,thuonghieu th where phai = 'Nam' and sp.thuonghieu = th.mathuonghieu");
+   		$result = mysqli_query($connect, "SELECT * from sanpham sp, thuonghieu th where phongcach = 'Sang Trọng'and sp.thuonghieu = th.mathuonghieu");
    		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){ 
    			$idsp = trim($row['masp']);
 			$tensp = trim($row['tensp']);		
