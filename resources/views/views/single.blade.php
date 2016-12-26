@@ -13,6 +13,7 @@
                         ?>
                         <?php
                         $connect = connect();
+                        mysqli_query($connect, "UPDATE sanpham set soluotxem = soluotxem+1 where masp = '$idsp'");
                         $result = mysqli_query($connect, "SELECT * from sanpham sp, thuonghieu th where sp.thuonghieu = th.mathuonghieu and sp.masp = '$idsp'");
                         while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){                            
                             $idsp = trim($row['masp']);
@@ -24,7 +25,8 @@
                             $xuatxu = trim($row['xuatxu']); 
                             $phongcach = trim($row['phongcach']);  
                             $matkinh = trim($row['matkinh']);      
-                            $hinhanh = trim($row['hinhanh']);     
+                            $hinhanh = trim($row['hinhanh']);
+                            $luotxem = trim($row['soluotxem']);     
                             $thuonghieu = trim($row['tenthuonghieu']);
                     ?>   
 
@@ -71,6 +73,7 @@
                         </div>
                         <ul class="size">
                             <h3>Mặt kính: <?php echo $matkinh ?></h3>
+                            <h6>Lượt xem: <?php echo $luotxem ?></h6>
                         </ul>
                         <div class="quantity_box">
                             <ul class="product-qty">
