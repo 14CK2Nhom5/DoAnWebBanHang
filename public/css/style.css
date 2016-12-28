@@ -1199,12 +1199,12 @@ ul.women_pagenation li a:hover{
 }
 .product_container p{
 	text-transform:uppercase;
-	font-size:0.8125em;
+	font-size:1.5 em;
 	color:#999;
 }
 .price{
 	font-weight: 100;
-	font-size: 0.95em;
+	font-size: 1.5em;
 	margin-top: 10px;
 }
 .view {

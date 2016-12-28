@@ -79,3 +79,6 @@ Route::get('/SangTrong', function () {
 Route::get('/TreTrung', function () {
     return view('views.tretrung');
 });
+Route::get('/Search', function () {
+    return view('views.search');
+});
