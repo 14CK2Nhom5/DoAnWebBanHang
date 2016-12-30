@@ -37,8 +37,20 @@ Route::get('/Brands', function () {
 Route::get('/Login', function () {
     return view('views.login');
 });
+Route::post('/XuLyLogin', function () {
+    return view('views.xulylogin');
+});
+Route::get('/ThongTinTaiKhoan', function () {
+    return view('views.thongtintaikhoan');
+});
+Route::post('/XuLyTaiKhoan', function () {
+    return view('views.xulytaikhoan');
+});
 Route::get('/Register', function () {
     return view('views.register');
+});
+Route::post('/XuLyRegister', function () {
+    return view('views.xulyregister');
 });
 Route::get('/single', function () {
     return view('views.single');
@@ -81,4 +93,16 @@ Route::get('/TreTrung', function () {
 });
 Route::get('/Search', function () {
     return view('views.search');
+});
+Route::get('/ChangeLogin', function () {
+    return view('views.changelogin');
+});
+Route::post('/XuLyChangeLogin', function () {
+    return view('views.xulychangelogin');
+});
+Route::get('/Edit', function () {
+    return view('views.edit');
+});
+Route::post('/XuLyEdit', function () {
+    return view('views.xulyedit');
 });
