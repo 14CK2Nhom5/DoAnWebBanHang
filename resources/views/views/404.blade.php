@@ -1,4 +1,4 @@
-@extends('Layout.master')
+@extends('Layout.error')
 
 @section('noidung')
 <div class="container">
