@@ -95,7 +95,7 @@
                             <div class="lb-overlay" id="image-4">
                                 <img src="images/g4.jpg"  class="img-responsive" alt="image04"/>
                                 <div></div>
-                                <a href="#page" class="lb-close">x Đóng</a>
+                                <a href="#page" class="lb-close">Đóng</a>
                             </div>
                         </li>
                         <li>
@@ -106,7 +106,7 @@
                             <div class="lb-overlay" id="image-5">
                                 <img src="images/g5.jpg"  class="img-responsive" alt="image05"/>
                                 <div></div>
-                                <a href="#page" class="lb-close">x Đóng</a>
+                                <a href="#page" class="lb-close">Đóng</a>
                             </div>
                         </li>
                         <li>
@@ -117,7 +117,7 @@
                             <div class="lb-overlay" id="image-6">
                                 <img src="images/g6.jpg"  class="img-responsive" alt="image06"/>
                                 <div></div>
-                                <a href="#page" class="lb-close">x Đóng</a>
+                                <a href="#page" class="lb-close">Đóng</a>
                             </div>
                         </li>
                         <li>
@@ -128,7 +128,7 @@
                             <div class="lb-overlay" id="image-7">
                                 <img src="images/g7.jpg"  class="img-responsive" alt="image07"/>
                                 <div></div>
-                                <a href="#page" class="lb-close">x Đóng</a>
+                                <a href="#page" class="lb-close">Đóng</a>
                             </div>
                         </li>
                         <li>
@@ -139,7 +139,7 @@
                             <div class="lb-overlay" id="image-8">
                                 <img src="images/g8.jpg"  class="img-responsive" alt="image08"/>
                                 <div></div>
-                                <a href="#page" class="lb-close">x Đóng</a>
+                                <a href="#page" class="lb-close">Đóng</a>
                             </div>
                         </li>
                         <div class="clearfix"></div>

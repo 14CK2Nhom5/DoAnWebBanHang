@@ -35,7 +35,7 @@
 	        // BƯỚC 5: TRUY VẤN LẤY DANH SÁCH TIN TỨC
 	        // Có limit và start rồi thì truy vấn CSDL lấy danh sách tin tức
 
-	   		$result = mysqli_query($connect, "SELECT * from sanpham sp, thuonghieu th where sp.tensp like '%$key%' or sp.masp like '%$key%' or sp.giatien like '%$key%'and sp.thuonghieu = th.mathuonghieu LIMIT $start, $limit");
+	   		$result = mysqli_query($connect, "SELECT * from sanpham sp, thuonghieu th where (sp.tensp like '%$key%' or sp.masp like '%$key%' or sp.giatien like '%$key%')and sp.thuonghieu = th.mathuonghieu LIMIT $start, $limit");
 	   		while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
 	   			$idsp = trim($row['masp']); 
 				$tensp = trim($row['tensp']);		
@@ -76,7 +76,7 @@
 	// BƯỚC 7: HIỂN THỊ PHÂN TRANG
 	// nếu current_page > 1 và total_page > 1 mới hiển thị nút prev
 	if ($current_page > 1 && $total_page > 1){
-	    echo '<a href="Men?page='.($current_page-1).'">Prev</a> | ';
+	    echo '<a href="Search?key='.$key.'&page='.($current_page-1).'">Prev</a> | ';
 	}
 	//cong day
 	$i = 1;
@@ -96,12 +96,12 @@
 	        echo '<span>'.$i.'</span> | ';
 	    }
 	    else{
-	        echo '<a href="Men?page='.$i.'">'.$i.'</a> | ';
+	        echo '<a href="Search?key='.$key.'&page='.$i.'">'.$i.'</a> | ';
 	    }
 	}
 	// nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
 	if ($current_page < $total_page && $total_page > 1){
-	    echo '<a href="Men?page='.($current_page+1).'">Next</a> ';
+	    echo '<a href="Search?key='.$key.'&page='.($current_page+1).'">Next</a> ';
 	}
 ?>
 </center>
