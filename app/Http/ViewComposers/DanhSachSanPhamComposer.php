@@ -25,7 +25,7 @@ class DanhSachSanPhamComposer
         $connect = mysqli_connect("localhost", "root", "") or die(mysql_error());
         mysqli_set_charset($connect, 'utf8');
         mysqli_select_db($connect, "watches") or die(mysql_error());
-        $result = mysqli_query($connect, "SELECT * from thuonghieu where thuonghieu = 'Casi'");
+        $result = mysqli_query($connect, "SELECT * from thuonghieu where thuonghieu = 'Long'");
         $view->with('DanhSachSanPham', $result);
     }
     public function men(View $view)
@@ -33,7 +33,7 @@ class DanhSachSanPhamComposer
         $connect = mysqli_connect("localhost", "root", "") or die(mysql_error());
         mysqli_set_charset($connect, 'utf8');
         mysqli_select_db($connect, "watches") or die(mysql_error());
-        $result = mysqli_query($connect, "SELECT * from thuonghieu where thuonghieu = 'Casi'");
+        $result = mysqli_query($connect, "SELECT * from thuonghieu where phai = 'Nam'");
         $view->with('DanhSachSanPham', $result);
     }
     public function orient(View $view)
@@ -41,7 +41,7 @@ class DanhSachSanPhamComposer
         $connect = mysqli_connect("localhost", "root", "") or die(mysql_error());
         mysqli_set_charset($connect, 'utf8');
         mysqli_select_db($connect, "watches") or die(mysql_error());
-        $result = mysqli_query($connect, "SELECT * from thuonghieu where thuonghieu = 'Casi'");
+        $result = mysqli_query($connect, "SELECT * from thuonghieu where thuonghieu = 'Orie'");
         $view->with('DanhMucSanPham', $result);
     }
     public function oris(View $view)
@@ -49,7 +49,7 @@ class DanhSachSanPhamComposer
         $connect = mysqli_connect("localhost", "root", "") or die(mysql_error());
         mysqli_set_charset($connect, 'utf8');
         mysqli_select_db($connect, "watches") or die(mysql_error());
-        $result = mysqli_query($connect, "SELECT * from thuonghieu where thuonghieu = 'Casi'");
+        $result = mysqli_query($connect, "SELECT * from thuonghieu where thuonghieu = 'Oist'");
         $view->with('DanhMucSanPham', $result);
     }
 
