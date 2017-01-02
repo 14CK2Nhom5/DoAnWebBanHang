@@ -50,7 +50,7 @@
                 ?>
                 <tr>
                     <th scope="row">{{$stt}}</th>
-                    <td><input type="text" name ="masp" value ="<?php echo $ma?>" ></td>
+                    <td><input type="text" name ="masp" value ="<?php echo $ma?>" readonly = 'readonly'></td>
                     <td><input type="text" name ="tensp" value ="<?php echo $ten?>"size="40"></td>
                     <td><input type="text" name ="mathuonghieu" value ="<?php echo $thuonghieu?>" size="3"></td>
                     <td><input type="text" name ="giatien" value ="<?php echo $gia?>" size="10"></td>
@@ -68,7 +68,10 @@
                         <input type="submit" value="Xóa" name="submit"> 
                     </td>
                 </tr>
-                <?php } ?>
+                <?php 
+                    } 
+                    mysqli_close($connect);
+                ?>
                 </tbody>
             </table>
         </form>

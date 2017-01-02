@@ -12,6 +12,8 @@
     $matkinh ='';
     $baohanh ='';
     $soluonghang ='';
+    $luotxem='';
+    $hinhanh = '';
     if(isset($_POST) && count($_POST) > 0)
     {
         $masanpham = $_POST['masp'];
@@ -49,9 +51,7 @@
             echo "<meta http-equiv='refresh' content='0;url=Edit?mess=MaSanPhamDaTonTai'>";
             return;
         }
-
         $size = sizeof($_FILES['userfile']['name']);
-
         echo '<pre>';
         for ($i=0; $i < $size ; $i++) { 
             $filename = basename($_FILES['userfile']['name'][$i]);
@@ -72,89 +72,15 @@
         mysqli_close($connect);
         echo "<meta http-equiv='refresh' content='0;url=Edit?mess=ThemThanhCong'>";
     }
-    if(isset($_POST['submit']) && $_POST['submit'] == "Cập nhật") {
-        $params = '';
-        $PATH_images = dirname(getcwd()) . '\public\images';
-        $masp = $masanpham;
-        $result = mysqli_query($connect, "SELECT * from sanpham where masp ='$masp' LIMIT 1");
-        if(mysqli_num_rows($result) < 1){
-            echo "<meta http-equiv='refresh' content='0;url=Edit?mess=SaiMaSanPham'>";
-            return;
-        }
-        $tensp = $tensanpham;
-        if ($tensp != "") {
-            $params = "tensp ='$tensp'";
-        }
-        $matt = $mathuonghieu;
-        if ($matt != "") {
-            if($params != '') $params .= ',';
-            $params .= "thuonghieu='$matt'";
-        }
-        $p = $phai;
-        if ($p != "") {
-            if($params != '') $params .= ',';
-            $params .= "phai='$p'";
-        }
-        $gia = $giatien;
-        if ($gia != "") {
-            if($params != '') $params .= ',';
-            $params .= "giatien =$gia";
-        }
-        $dvi = $donvi;
-        if ($dvi != "") {
-            if($params != '') $params .= ',';
-            $params .= "donvi='$dvi'";
-        }
-        $xxu = $xuatxu;
-        if ($xxu != "") {
-            if($params != '') $params .= ',';
-            $params .= "xuatxu='$xxu'";
-        }
-        $pcach  = $phongcach;
-        if ($pcach != "") {
-            if($params != '') $params .= ',';
-            $params .= "phongcach='$pcach'";
-        }
-        $mkinh = $matkinh;
-        if ($mkinh != "") {
-            if($params != '') $params .= ',';
-            $params .= "matkinh='$mkinh'";
-        }
-        $bhanh = $baohanh;
-        if ($bhanh != "") {
-            if($params != '') $params .= ',';
-            $params .= "baohanh=$bhanh";
-        }
-        $slhang = $soluonghang;
-        if ($slhang != "") {
-            if($params != '') $params .= ',';
-            $params .= "soluonghang=$slhang";
-        }
-        
-        if (isset($_FILES) && $_FILES['userfile']['name'][0] != '')
-        {
-            //var_dump($_FILES);die;
-            $size = sizeof($_FILES['userfile']['name']);
-            for ($i=0; $i < $size ; $i++) { 
-                $filename = basename($_FILES['userfile']['name'][$i]);
-                $ext= explode('.', $filename);
-                $ext = $ext[sizeof($ext)-1];
-                $uploadfile = $PATH_images . "\\$masp" . ".$ext"; 
-                $params .= ",hinhanh = 'images/$masp.$ext'";          
-                if (move_uploaded_file($_FILES['userfile']['tmp_name'][$i], $uploadfile)) {
-                    $mess = "Successfully uploaded " . $filename ;
-                } else {
-                    echo "Cannot upload " . $filename . "!\n";
-                }
-            }
-        }
-        echo 'Here is some more debugging info:';
-        print_r($_FILES['userfile']['name']);
-        print "</pre>";
-        //echo "UPDATE sanpham SET ".$params." where masp = '$masp'";die;
-        $result = mysqli_query($connect, "UPDATE sanpham SET ".$params." where masp = '$masp'");
+    if(isset($_POST['submit']) && $_POST['submit'] == "Sửa") {
+
+        $hinhanh =$_POST['hinhanh'];
+        $luotxem =$_POST['luotxem'];
+        echo "UPDATE sanpham SET tensp='$tensanpham',thuonghieu='$mathuonghieu',giatien =$giatien,donvi ='$donvi',xuatxu='$xuatxu',phai ='$phai',phongcach='$phongcach',matkinh='$matkinh',baohanh=$baohanh,hinhanh='$hinhanh',soluonghang=$soluonghang,soluotxem=$luotxem where masp = '$masanpham'";die;
+        $result = mysqli_query($connect, "UPDATE sanpham SET tensp='$tensanpham',thuonghieu='$mathuonghieu',giatien =$giatien,donvi ='$donvi',xuatxu='$xuatxu',phai ='$phai',
+        phongcach='$phongcach',matkinh='$matkinh',baohanh=$baohanh,hinhanh='$hinhanh',soluonghang=$soluonghang,soluotxem=$luotxem where masp = '$masanpham'");
         mysqli_close($connect);
-        echo "<meta http-equiv='refresh' content='0;url=Edit?mess=SuaThanhCong'>";
+        echo "<meta http-equiv='refresh' content='0;url=QuanLySanPham?mess=SuaThanhCong'>";
     }
     if(isset($_POST['submit']) && $_POST['submit'] == "Xóa") {
         //var_dump($_POST);die;
@@ -166,9 +92,8 @@
         }
         $result1 = mysqli_query($connect, "DELETE from sanpham where masp = '$masp'");
         mysqli_close($connect);
-        echo "<meta http-equiv='refresh' content='0;url=Edit?mess=XoaThanhCong'>";
+        echo "<meta http-equiv='refresh' content='0;url=QuanLySanPham?mess=XoaThanhCong'>";
     }
-    mysqli_close($connect);
 ?>
 <?php
     function connect(){ 
