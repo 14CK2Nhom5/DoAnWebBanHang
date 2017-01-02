@@ -109,3 +109,7 @@ Route::post('/XuLyTaiKhoanAdmin', function () {
 Route::get('/QuanLySanPham', function () {
     return view('views.quanlysanpham');
 });
+Route::get('/QuanLyKhachHang', function () {
+    return view('views.quanlykhachhang');
+});
+
