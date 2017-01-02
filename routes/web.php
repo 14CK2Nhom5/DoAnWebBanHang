@@ -112,4 +112,6 @@ Route::get('/QuanLySanPham', function () {
 Route::get('/QuanLyKhachHang', function () {
     return view('views.quanlykhachhang');
 });
-
+Route::get('/QuanLyTaiKhoan', function () {
+    return view('views.quanlytaikhoan');
+});
