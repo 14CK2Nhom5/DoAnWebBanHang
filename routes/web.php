@@ -91,3 +91,6 @@ Route::post('/XuLyEdit', function () {
     return view('views.xulyedit');
 });
 
+Route::get('/QuanLySanPham', function () {
+    return view('views.QuanLySanPham');
+});
