@@ -167,6 +167,7 @@
         mysqli_close($connect);
         echo "<meta http-equiv='refresh' content='0;url=Edit?mess=XoaThanhCong'>";
     }
+    mysqli_close($connect);
 ?>
 <?php
     function connect(){ 

@@ -21,7 +21,7 @@
                         <span class="pass">Mật khẩu</span>
                         <input type="password" name ="pass">
                     </div>
-                    <input type="submit" value="Đăng nhập">
+                    <input type="submit" name = "OK" value="Đăng nhập">
                 </form>
             </div>
             <div class="col-md-5 left-account ">
