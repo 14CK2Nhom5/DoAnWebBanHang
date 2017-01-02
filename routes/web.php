@@ -90,7 +90,7 @@ Route::get('/Edit', function () {
 Route::post('/XuLyEdit', function () {
     return view('views.xulyedit');
 });
-<<<<<<< HEAD
+
 Route::get('/TrangAdmin', function () {
     return view('views.trangadmin');
 });
@@ -105,9 +105,7 @@ Route::get('/TaiKhoan', function () {
 });
 Route::post('/XuLyTaiKhoanAdmin', function () {
     return view('views.xulytaikhoanadmin');
-=======
-
+});
 Route::get('/QuanLySanPham', function () {
-    return view('views.QuanLySanPham');
->>>>>>> origin/master
+    return view('views.quanlysanpham');
 });

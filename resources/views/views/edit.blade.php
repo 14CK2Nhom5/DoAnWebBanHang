@@ -57,9 +57,7 @@
                         <input type="file" name="userfile[]" id="fileToUpload">                                                   
                     </div>
                     <div>                                                                                 
-                            <input type="submit" value="Thêm" name="submit"> 
-                            <input type="submit" value="Cập nhật" name="submit">         
-                            <input type="submit" value="Xóa" name="submit">                                                           
+                            <input type="submit" value="Thêm" name="submit">                                                
                     </div>
                     
                     <div class="clearfix"> </div>

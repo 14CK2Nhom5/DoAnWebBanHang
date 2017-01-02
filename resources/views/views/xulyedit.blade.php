@@ -1,5 +1,6 @@
 <?php
     $connect = connect();
+    var_dump($_POST);die;
     $masanpham = '';
     $tensanpham ='';
     $mathuonghieu ='';

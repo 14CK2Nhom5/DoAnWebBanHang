@@ -6,15 +6,11 @@
             <h3>Chọn chức năng</h3>
             <div class="col-md-7 account-top">
                 <form action = 'Edit' method="get">
-                    <input type = 'submit' value="Quản lý sản phẩm">
+                    <input type = 'submit' value="Thêm sản phẩm">
                 </form>
                 </br>
-                <form action = 'Edit' method="get">
+                <form action = 'QuanLySanPham' method="get">
                     <input type = 'submit' value="Danh sách sản phẩm">
-                </form>
-                </br>
-                <form action = 'KhachHang' method="get">
-                    <input type = 'submit' value="Quản lý khách hàng">
                 </form>
                 </br>
                 <form action = 'Edit' method="get">
