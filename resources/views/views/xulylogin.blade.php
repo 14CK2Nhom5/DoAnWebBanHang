@@ -5,6 +5,7 @@
     $mk = '';
     $matk='';
     $tentk = '';
+    $phanquyen='';
     if(isset($_POST) && count($_POST) > 0)
     {
         $tk = $_POST['username'];
@@ -14,10 +15,18 @@
     while($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
         $mataikhoan = trim($row['mataikhoan']);
         $tentk = trim($row['tentaikhoan']);
+        $phanquyen = trim($row['phanquyen']);
     }
     mysqli_close($connect);
     if($tentk != '')
-         echo "<meta http-equiv='refresh' content='0;url=ThongTinTaiKhoan?username=$mataikhoan'>";
+    {
+        if($phanquyen =='khách hàng')
+            echo "<meta http-equiv='refresh' content='0;url=ThongTinTaiKhoan?username=$mataikhoan'>";
+        else{
+            if($phanquyen == 'admin')
+                echo "<meta http-equiv='refresh' content='0;url=TrangAdmin'>";
+        }
+    }
     else
          echo "<meta http-equiv='refresh' content='0;url=Login?KhongTonTai'>";
      

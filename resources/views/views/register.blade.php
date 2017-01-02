@@ -57,7 +57,7 @@
                 </div>
                 <div class="clearfix"> </div>
                 <div class="register-but">
-                <input type="submit" value="Đăng ký">
+                <input type="submit" value="Đăng ký" name="submit">
                 <div class="clearfix"> </div>
             </form>
             </div>

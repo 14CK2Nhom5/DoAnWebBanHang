@@ -106,3 +106,18 @@ Route::get('/Edit', function () {
 Route::post('/XuLyEdit', function () {
     return view('views.xulyedit');
 });
+Route::get('/TrangAdmin', function () {
+    return view('views.trangadmin');
+});
+Route::get('/KhachHang', function () {
+    return view('views.khachhang');
+});
+Route::post('/XuLyKhachHang', function () {
+    return view('views.xulykhachhang');
+});
+Route::get('/TaiKhoan', function () {
+    return view('views.taikhoan');
+});
+Route::post('/XuLyTaiKhoanAdmin', function () {
+    return view('views.xulytaikhoanadmin');
+});

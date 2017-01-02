@@ -29,7 +29,7 @@
         $diachi = $diachi1;
         $sodt = $sdt;
         $result = mysqli_query($connect, "UPDATE khachhang SET tenkh= '$tenkhachhang',cmnd = $chungminhnd,email = '$email',diachi = '$diachi',sodt = '$sodt' where makh = '$makh'");
-        echo "<meta http-equiv='refresh' content='0;url=ThongTinTaiKhoan?username=$matk'>";
+        echo "<meta http-equiv='refresh' content='0;url=ThongTinTaiKhoan?username=$matk'&CapNhatThanhCong>";
     }
     if (isset($_POST['submit']) && $_POST['submit'] == "Đăng xuất") {
         echo "<meta http-equiv='refresh' content='0;url=Login'>";

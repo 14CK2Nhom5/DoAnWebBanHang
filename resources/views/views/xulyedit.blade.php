@@ -41,6 +41,14 @@
         $bhanh = $baohanh;
         $slhang = $soluonghang;
 
+        $result1 = mysqli_query($connect, "SELECT * from sanpham where masp ='$masp' LIMIT 1");
+        if(mysqli_num_rows($result1) > 0)
+        {
+            //mysqli_close($connect);
+            echo "<meta http-equiv='refresh' content='0;url=Edit?mess=MaSanPhamDaTonTai'>";
+            return;
+        }
+
         $size = sizeof($_FILES['userfile']['name']);
 
         echo '<pre>';
@@ -69,7 +77,7 @@
         $masp = $masanpham;
         $result = mysqli_query($connect, "SELECT * from sanpham where masp ='$masp' LIMIT 1");
         if(mysqli_num_rows($result) < 1){
-            echo "<meta http-equiv='refresh' content='0;url=Edit?=SaiMaSanPham'>";
+            echo "<meta http-equiv='refresh' content='0;url=Edit?mess=SaiMaSanPham'>";
             return;
         }
         $tensp = $tensanpham;
@@ -151,14 +159,12 @@
         //var_dump($_POST);die;
         $masp = $masanpham;
         $result = mysqli_query($connect, "SELECT * from sanpham where masp ='$masp' LIMIT 1");
-        mysqli_close($connect);
         if(mysqli_num_rows($result) < 1){
-            echo "<meta http-equiv='refresh' content='0;url=Edit?=SaiMaSanPham'>";
+            echo "<meta http-equiv='refresh' content='0;url=Edit?mess=SaiMaSanPham'>";
             return;
         }
-        
-        //echo 'DELETE from sanpham where masp = '$masp'';
-        $result = mysqli_query($connect, "DELETE from sanpham where masp = '$masp'");
+        $result1 = mysqli_query($connect, "DELETE from sanpham where masp = '$masp'");
+        mysqli_close($connect);
         echo "<meta http-equiv='refresh' content='0;url=Edit?mess=XoaThanhCong'>";
     }
 ?>
