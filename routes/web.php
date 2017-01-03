@@ -57,7 +57,9 @@ Route::get('/SangTrong', 'load@sangtrong');
 Route::get('/TreTrung', 'load@tretrung');
 
 Route::get('/Search', 'load@search');
+Route::get('/DangNhap', 'load@DangNhap');
 
+Route::get('/DangKy', 'load@DangKy');
 
 
 
@@ -118,3 +120,7 @@ Route::get('/QuanLyTaiKhoan', function () {
 Route::get('/QuanLyThuongHieu', function () {
     return view('views.quanlythuonghieu');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index');

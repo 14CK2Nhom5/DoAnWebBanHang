@@ -48,11 +48,30 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="header_top_right">
                 <div class="lang_list">
                 </div>
-                <ul class="header_user_info">
-                    <a class="login" href="Login">
-                        <i class="user"> </i>
-                        <li class="user_desc">Tài khoản</li>
-                    </a>
+                <ul class="header_user_info" >
+                     <!-- Authentication Links -->
+                        @if (Auth::guest())
+                           
+                            <a href="DangNhap">Đăng Nhập</a>
+                            </br>
+                            <a href="DangKy">Đăng Ký</a>
+                            
+                        @else
+                                <a href="TrangAdmin" >
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+                                </br>
+                                <a href="{{ url('/logout') }}"
+                                      onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                                         Đăng Xuất
+                                </a>
+
+                                <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                </form>
+                            
+                        @endif
                     <div class="clearfix"> </div>
                 </ul>
                 <!-- start search-->
