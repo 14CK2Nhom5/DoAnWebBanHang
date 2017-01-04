@@ -42,7 +42,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                 <div class="box_11"><a href="checkout">
                         <h4><p>Giỏ hàng: <span class="simpleCart_total"></span> (<span id="simpleCart_quantity" class="simpleCart_quantity"></span> sản phẩm)</p><img src="images/bag.png" alt=""/><div class="clearfix"> </div></h4>
                     </a></div>
-               <!-- <p class="empty"><a href="javascript:;" class="simpleCart_empty">Giỏ hàng trống</a></p>-->
+                <p class="empty"><a href="javascript:;" class="simpleCart_empty">Giỏ hàng trống</a></p>
                 <div class="clearfix"> </div>
             </div>
             <div class="header_top_right">
@@ -126,12 +126,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <div class="main">
     @yield('noidung')
     </div>
-    </br>
-<div class="footer" style="margin-left: 15%;float:center;margin-top: 15%" >
+<div class="footer">
     <div class="container">
         <div class="newsletter">
-
-            <div style="text-align: center;float:left;margin-top: 5%"><p>Nhập Email của bạn tại đây để nhận được những tin tức mới nhất</p><div>
+            <p>Nhập Email của bạn tại đây để nhận được những tin tức mới nhất</p>
             <form>
                 <input type="text" value="" onfocus="this.value='';" onblur="if (this.value == '') {this.value ='';}">
                 <input type="submit" value="Đăng ký">

@@ -370,7 +370,7 @@ ul.header_user_info li.user_desc{
 	padding: 2em 0;
 }
 .logo h1{
-    font-size:22em;
+    font-size:7em;
     text-transform: uppercase;
     margin-bottom: 0;
     font-family: 'Dorsa', sans-serif;
@@ -2777,14 +2777,4 @@ ul.products li {
 }
 .pro {
 	padding-top:1em;
-}
-.products {
-   list-style-type: none;
-}
-
-.products li {
-   display: block;
-   float: left;
-   width: 225px; /* bề rộng bao nhiêu tùy bạn */
-   text-align: center; /* để hình ảnh, tên và giá sản phẩm nằm vô giữa */
 }
