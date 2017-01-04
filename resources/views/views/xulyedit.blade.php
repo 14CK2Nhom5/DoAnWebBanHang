@@ -1,6 +1,6 @@
 <?php
     $connect = connect();
-    var_dump($_POST);die;
+    //var_dump($_POST);die;
     $masanpham = '';
     $tensanpham ='';
     $mathuonghieu ='';
@@ -12,8 +12,6 @@
     $matkinh ='';
     $baohanh ='';
     $soluonghang ='';
-    $luotxem='';
-    $hinhanh = '';
     if(isset($_POST) && count($_POST) > 0)
     {
         $masanpham = $_POST['masp'];
@@ -51,7 +49,9 @@
             echo "<meta http-equiv='refresh' content='0;url=Edit?mess=MaSanPhamDaTonTai'>";
             return;
         }
+
         $size = sizeof($_FILES['userfile']['name']);
+
         echo '<pre>';
         for ($i=0; $i < $size ; $i++) { 
             $filename = basename($_FILES['userfile']['name'][$i]);
@@ -72,28 +72,7 @@
         mysqli_close($connect);
         echo "<meta http-equiv='refresh' content='0;url=Edit?mess=ThemThanhCong'>";
     }
-    if(isset($_POST['submit']) && $_POST['submit'] == "Sửa") {
-
-        $hinhanh =$_POST['hinhanh'];
-        $luotxem =$_POST['luotxem'];
-        echo "UPDATE sanpham SET tensp='$tensanpham',thuonghieu='$mathuonghieu',giatien =$giatien,donvi ='$donvi',xuatxu='$xuatxu',phai ='$phai',phongcach='$phongcach',matkinh='$matkinh',baohanh=$baohanh,hinhanh='$hinhanh',soluonghang=$soluonghang,soluotxem=$luotxem where masp = '$masanpham'";die;
-        $result = mysqli_query($connect, "UPDATE sanpham SET tensp='$tensanpham',thuonghieu='$mathuonghieu',giatien =$giatien,donvi ='$donvi',xuatxu='$xuatxu',phai ='$phai',
-        phongcach='$phongcach',matkinh='$matkinh',baohanh=$baohanh,hinhanh='$hinhanh',soluonghang=$soluonghang,soluotxem=$luotxem where masp = '$masanpham'");
-        mysqli_close($connect);
-        echo "<meta http-equiv='refresh' content='0;url=QuanLySanPham?mess=SuaThanhCong'>";
-    }
-    if(isset($_POST['submit']) && $_POST['submit'] == "Xóa") {
-        //var_dump($_POST);die;
-        $masp = $masanpham;
-        $result = mysqli_query($connect, "SELECT * from sanpham where masp ='$masp' LIMIT 1");
-        if(mysqli_num_rows($result) < 1){
-            echo "<meta http-equiv='refresh' content='0;url=Edit?mess=SaiMaSanPham'>";
-            return;
-        }
-        $result1 = mysqli_query($connect, "DELETE from sanpham where masp = '$masp'");
-        mysqli_close($connect);
-        echo "<meta http-equiv='refresh' content='0;url=QuanLySanPham?mess=XoaThanhCong'>";
-    }
+    
 ?>
 <?php
     function connect(){ 

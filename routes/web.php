@@ -57,6 +57,7 @@ Route::get('/SangTrong', 'load@sangtrong');
 Route::get('/TreTrung', 'load@tretrung');
 
 Route::get('/Search', 'load@search');
+
 Route::get('/DangNhap', 'load@DangNhap');
 
 Route::get('/DangKy', 'load@DangKy');
@@ -86,13 +87,11 @@ Route::get('/ChangeLogin', function () {
 Route::post('/XuLyChangeLogin', function () {
     return view('views.xulychangelogin');
 });
-Route::get('/Edit', function () {
-    return view('views.edit');
-});
+
+Route::get('/Edit', 'Load@edit');
 Route::post('/XuLyEdit', function () {
     return view('views.xulyedit');
 });
-
 Route::get('/TrangAdmin', function () {
     return view('views.trangadmin');
 });
@@ -124,3 +123,38 @@ Route::get('/QuanLyThuongHieu', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::get('/NguoiDung', 'load@getnguoidung');
+
+Route::post('/NguoiDung', 'load@postnguoidung');
+
+use App\ThuongHieu;
+Route::group(['prefix'=>'views/admin'],function(){
+    Route::group(['prefix'=>'thuonghieu'],function(){
+        //views/admin/danhsach
+        Route::get('danhsach','ThuongHieuController@getDanhSach');
+
+        Route::get('sua','ThuongHieuController@getSua');
+
+        Route::get('them','ThuongHieuController@getThem');
+    });
+
+    Route::group(['prefix'=>'sanpham'],function(){
+        //views/admin/danhsach
+        Route::get('danhsach','ThuongHieuController@getDanhSach');
+
+        Route::get('sua','ThuongHieuController@getSua');
+
+        Route::get('them','ThuongHieuController@getThem');
+    });
+
+    Route::group(['prefix'=>'user'],function(){
+        //views/admin/danhsach
+        Route::get('danhsach','ThuongHieuController@getDanhSach');
+
+        Route::get('sua','ThuongHieuController@getSua');
+
+        Route::get('them','ThuongHieuController@getThem');
+    });
+});
+
