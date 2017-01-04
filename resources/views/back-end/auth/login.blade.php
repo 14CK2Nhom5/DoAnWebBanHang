@@ -1,13 +1,13 @@
-@extends('layouts.master')
+@extends('back-end.layouts.app')
 
 @section('content')
 <div class="container">
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Bạn cần đăng nhập</div>
+                <div class="panel-heading">Đăng nhập Admin</div>
                 <div class="panel-body">
-                    <form class="form-horizontal" role="form" method="POST" id="login-form" action="{{ url('/login') }}">
+                    <form class="form-horizontal" role="form" method="POST" action="{{ url('admin/login') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
@@ -57,7 +57,7 @@
                                 <a class="btn btn-link" href="{{ url('/password/reset') }}">Bạn đã quên mật khẩu?</a>
                             </div>
                         </div>
-                    </form>                    
+                    </form>
                 </div>
             </div>
         </div>
