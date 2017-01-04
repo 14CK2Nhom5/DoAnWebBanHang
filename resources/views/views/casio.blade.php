@@ -39,38 +39,34 @@
 			$hinhanh=trim($row['hinhanh']);		
 			$thuonghieu = trim($row['tenthuonghieu']);
 	?>
-		<li class="simpleCart_shelfItem">
-			<a class="cbp-vm-image" href="single?id=<?php echo $idsp ?>">
-			  <div class="view view-first">
-	   		  <div class="inner_content clearfix">
-				<div class="product_image">
-					<div class="mask1"><img src="<?php echo $hinhanh ?>" alt="image" class="img-responsive zoom-img"></div>
-					 <div class="mask">
-	               		<div class="info">Quick View</div>
+		<a class="cbp-vm-image" href="single?id=<?php echo $idsp ?>">
+			  
+			  <div style="pading:10px; width:198px;margin-left: 16px; height:450px; boder:2px solid #ff0000; float:left; background:#FFF">
+    			<img src="<?php echo $hinhanh ?>" width="198" alt="image" class="img-responsive zoom-img">
+    			<div class="mask">
+	               		<div class="info">Xem chi tiết</div>
 	                  </div>
 					 <div class="product_container">
 					   <h4><?php echo $tensp ?></h4>
 					   <p><?php echo $thuonghieu ?></p>
 					   <div class="price mount item_price"><?php echo number_format($gia) , " " , $donvi ?></div>
-					   <a class="button item_add cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
-					 </div>		
-				  </div>
-	             </div>
-	          </div>
-			 </a>
-		</li>	
+					   <a class="button item_add cbp-vm-icon cbp-vm-add" href="#">Thêm vào giỏ hàng</a>
+	          		</div>
+				</div>	
+					 
+			</a>
 	<?php 
 		}
    		mysqli_close($connect);
 	?>	
 	<!-- more list items -->
 </ul>
-<center>
+<div style="text-align: center;float:left;margin-left: 40%;margin-top: 2%;font-size:15px">
 <?php
 	// BƯỚC 7: HIỂN THỊ PHÂN TRANG
 	// nếu current_page > 1 và total_page > 1 mới hiển thị nút prev
 	if ($current_page > 1 && $total_page > 1){
-	    echo '<a href="Casio?page='.($current_page-1).'">Prev</a> | ';
+	    echo '<a href="Casio?page='.($current_page-1).'">Trang trước</a> | ';
 	}
 	//cong day
 	$i = 1;
@@ -95,10 +91,10 @@
 	}
 	// nếu current_page < $total_page và total_page > 1 mới hiển thị nút prev
 	if ($current_page < $total_page && $total_page > 1){
-	    echo '<a href="Casio?page='.($current_page+1).'">Next</a> ';
+	    echo '<a href="Casio?page='.($current_page+1).'">Trang sau</a> ';
 	}
 ?>
-</center>
+</div>
                 <script src="js/cbpViewModeSwitch.js" type="text/javascript"></script>
                 <script src="js/classie.js" type="text/javascript"></script>
            

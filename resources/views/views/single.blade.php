@@ -150,7 +150,7 @@
                     <li class="product_desc">
                         <h4><a href="single?id=<?php echo $idsp ?>"><?php echo $tensp ?></a></h4>
                         <p class="single_price"><?php echo number_format($gia) , " " , $donvi ?></p>
-                        <a href="single?id=<?php echo $idsp ?>" class="link-cart">Add to Cart</a>
+                        <a href="single?id=<?php echo $idsp ?>" class="link-cart">Thêm vào giỏ hàng</a>
                     </li>
                     <div class="clearfix"> </div>
                 </ul>
