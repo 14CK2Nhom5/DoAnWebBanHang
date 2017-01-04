@@ -127,7 +127,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     @yield('noidung')
     </div>
     </br>
-<div class="footer" style="margin-left: 15%;float:center;margin-top: 15%" >
+<div class="footer" style="margin-left: 15%;float:center;margin-top: 10%" >
     <div class="container">
         <div class="newsletter">
 
