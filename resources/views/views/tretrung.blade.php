@@ -47,13 +47,13 @@
 				<div class="product_image">
 					<div class="mask1"><img src="<?php echo $hinhanh ?>" alt="image" class="img-responsive zoom-img"></div>
 					 <div class="mask">
-	               		<div class="info">Quick View</div>
+	               		<div class="info">Xem chi tiết</div>
 	                  </div>
 					 <div class="product_container">
 					   <h4><?php echo $tensp ?></h4>
 					   <p><?php echo $thuonghieu ?></p>
 					   <div class="price mount item_price"><?php echo number_format($gia) , " " , $donvi ?></div>
-					   <a class="button item_add cbp-vm-icon cbp-vm-add" href="#">Add to cart</a>
+					   <a class="button item_add cbp-vm-icon cbp-vm-add" href="#">Thêm vào giỏ hàng</a>
 					 </div>		
 				  </div>
 	             </div>
