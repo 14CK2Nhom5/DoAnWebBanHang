@@ -66,7 +66,7 @@
                             </div>  
                           </div>                       
                         </div>                     
-                       <label class="btn btn-large btn-block btn-warning">{!!number_format($data->price)!!} vnd</label>
+                       <label class="btn btn-large btn-block btn-warning">{!!number_format($data->price)!!} Vnđ</label>
                     </div>
                     <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
                       <div class="panel panel-info" style="margin: 0;">
@@ -250,7 +250,7 @@
                   <li><strong>Pin</strong> :<i> {!!$row->pin!!}</i></li>
                 </a>
               </div>
-                <span class="btn label-warning"><strong>{!!number_format($row->price)!!}</strong>Vnd </span>
+                <span class="btn label-warning"><strong>{!!number_format($row->price)!!}</strong>Vnđ </span>
                 <a href="{!!url('gio-hang/addcart/'.$row->id)!!}" class="btn btn-success pull-right add">Thêm vào giỏ </a>
             </div> <!-- / div thumbnail -->
           </div>  <!-- /div col-4 -->
@@ -279,7 +279,7 @@
         <h3 class="panel-title">Fans Pages</h3>
       </div>
       <div class="panel-body">
-        Hãy <a href="#" title="">Like</a> facebook của MyWeb để cập nhật tin mới nhất
+        Hãy <a href="#" title="">Like</a> facebook của Gshop để cập nhật tin mới nhất
       </div>
     </div> <!-- /fan pages myweb -->        
   </div> 

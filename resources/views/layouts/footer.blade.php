@@ -2,8 +2,8 @@
       <div class="container">
         <hr>
         <footer>
-          © 2007 - 2016 Công Ty Cổ Phần Bán Lẻ Kỹ Thuật Số FSHOP / Địa chỉ: TP. BMT / GPĐKKD số: Websitr đang thử nghiệm. <br>
-          Thiết Kế Bởi : <a href="https://www.facebook.com/vietdhtn" title="" target="#">Hoàng Việt</a>
+          © 2014 - 2017 Công Ty Cổ Phần Bán Lẻ Kỹ Thuật Số GSHOP / Địa chỉ: TP.HCM / GPĐKKD số: Website đang thử nghiệm. <br>
+          Thiết Kế Bởi : <a href="#" title="" target="#">Nhóm 5</a>
       </footer>
       </div>
     </div>

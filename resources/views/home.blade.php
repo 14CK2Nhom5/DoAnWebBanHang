@@ -32,7 +32,7 @@
                   <li><strong>Pin</strong> :<i> {!!$row->pin!!}</i></li>
                 </a>
               </div>
-                <span class="btn label-warning"><strong>{!!$row->price!!}</strong> Đ </span>
+                <span class="btn label-warning"><strong>{!!number_format($row->price)!!}</strong> Vnđ </span>
                 <a href="{!!url('gio-hang/addcart/'.$row->id)!!}" class="btn btn-success pull-right add">Thêm vào giỏ </a>
             </div> <!-- / div thumbnail -->
           </div>  <!-- /div col-4 -->
@@ -59,7 +59,7 @@
                       <li> <span class="glyphicon glyphicon-hand-right"></span> {!!$row->promo3!!}</li>
                   </p>
                   <p>
-                    <span class="btn label-warning">Giá : <strong>{!!$row->price!!}</strong> Đ </span>
+                    <span class="btn label-warning">Giá : <strong>{!!number_format($row->price)!!}</strong> Vnđ </span>
                   </p>
                 </div>
               </div>
@@ -91,8 +91,8 @@
         <div class="clearfix">
           
         </div>
-          <a href="http://api.hostinger.vn/redir/1309904" target="_blank"> 
-            <img src="images/slides/thumbs/qc1.png" alt="Hosting Miễn Phí" border="0" width="100%" height="250" />
+          <a href="#"> 
+            <img src="images/slides/thumbs/qc1.png" alt="Quảng Cáo" border="0" width="100%" height="250" />
           </a>
 <!-- =============== danh muc may tinh ===================================== -->
         <div id="pc"></div>

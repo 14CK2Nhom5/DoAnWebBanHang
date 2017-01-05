@@ -55,14 +55,14 @@
                         <a href="{!!url('gio-hang/update/'.$row->rowId.'/'.$row->qty.'-up')!!}"><span class="glyphicon glyphicon-plus-sign"></span></a>
                       </td>
                       <td><a href="{!!url('gio-hang/delete/'.$row->rowId)!!}" onclick="return xacnhan('Xóa sản phẩm này ?')" ><span class="glyphicon glyphicon-remove" style="padding:5px; font-size:18px; color:red;"></span></a></td>
-                      <td>{!! number_format($row->price) !!} Vnd</td>
-                      <td>{!! number_format($row->qty * $row->price) !!} Vnd</td>
+                      <td>{!! number_format($row->price) !!} Vnđ</td>
+                      <td>{!! number_format($row->qty * $row->price) !!} Vnđ</td>
                     </tr>
                   @endforeach                    
                     <tr>
                       <td colspan="3"><strong>Tổng cộng :</strong> </td>
                       <td>{!!Cart::count()!!}</td>
-                      <td colspan="2" style="color:red;">{!!Cart::subtotal()!!} Vnd</td>                      
+                      <td colspan="2" style="color:red;">{!!Cart::subtotal()!!} Vnđ</td>                      
                     </tr>                    
                   </tbody>
                 </table>                
@@ -77,14 +77,13 @@
                         <option value="paypal">Paypal (Thanh toán qua Paypal)</option>                      
                       </select>
                     </div>
-                  <a class="btn btn-large btn-warning pull-right" href="{!!url('/login')!!}" >Tiến hàng thanh toán</a>
+                  <a class="btn btn-large btn-warning pull-right" href="{!!url('/login')!!}" >Tiến hành thanh toán</a>
                 @else
                   <form action="{!!url('/dat-hang')!!}" method="get" accept-charset="utf-8">                    
                     <div class="input-group">
                     <label for="paymethod">Chọn phương thức thanh toán</label>
                       <select name="paymethod" id="inputPaymethod" class="form-control" required="required">
                         <option value="">Hãy chọn phương thức thanh toán</option> 
-                        <option value="paypal">Thanh toán trực tuyến ( Paypal )</option> 
                         <option value="cod"> Thanh toán khi nhận hàng ( COD )</option>
                       </select>
                     </div>
@@ -158,7 +157,7 @@
                   <li><strong>Pin</strong> :<i> {!!$row->pin!!}</i></li>
                 </a>
               </div>
-                <span class="btn label-warning"><strong>{!!number_format($row->price)!!}</strong>Vnd </span>
+                <span class="btn label-warning"><strong>{!!number_format($row->price)!!}</strong>Vnđ </span>
                 <a href="{!!url('gio-hang/addcart/'.$row->id)!!}" class="btn btn-success pull-right add">Thêm vào giỏ </a>
             </div> <!-- / div thumbnail -->
           </div>  <!-- /div col-4 -->
@@ -187,7 +186,7 @@
         <h3 class="panel-title">Fans Pages</h3>
       </div>
       <div class="panel-body">
-        Hãy <a href="#" title="">Like</a> facebook của MyWeb để cập nhật tin mới nhất
+        Hãy <a href="#" title="">Like</a> facebook của Gshop để cập nhật tin mới nhất
       </div>
     </div> <!-- /fan pages myweb -->        
   </div> 
