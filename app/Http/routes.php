@@ -100,4 +100,5 @@ Route::group(['middleware' => 'admin'], function () {
     });     
 });
 
+
 Route:: post('timkiem', 'PagesController@timkiem');

@@ -195,7 +195,6 @@ class PagesController extends Controller
             return redirect()->route('index');
         }
     }
-
     function timkiem(Request $request)
     {
         $tukhoa = $request->tukhoa;

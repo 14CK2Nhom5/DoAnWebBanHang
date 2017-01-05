@@ -2,7 +2,7 @@
     <nav class="navbar navbar-default navbar-top" role="navigation" id="main-Nav" style="background-color: #FACC2E;margin-bottom: 5px;font-size: 13px;">
       <div class="container" style="color: red;">  
         <div class="row">
-          <!-- Brand and toggle get grouped for better mobile display -->
+          <!-- Brand and toggle get grouped for better mobile displays -->
           <div class="navbar-header">
              <span  class="visible-xs pull-left" style="font-size:30px;cursor:pointer; padding-left: 10px; color: #ecf0f1;" onclick="openNav()">&#9776; </span> 
              <span  class="visible-xs pull-right" style="font-size:20px;cursor:pointer; padding-right: 10px; padding-top: 8px; color: #FFFFFF;" >      
@@ -96,7 +96,7 @@
         <form  method = 'post' action = "timkiem" role="search" style="width: 30%; padding-top: 20px;">
           <input type="hidden" name="_token" value ="{{csrf_token()}}";> 
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="Tên sản phẩm tìm kiếm ..." name="tukhoa" id="tukhoa">
+                <input type="text" class="form-control" placeholder="Nhập tên sản phẩm tìm kiếm ..." name="tukhoa" id="tukhoa">
             </div>
           </input>
         </form> 

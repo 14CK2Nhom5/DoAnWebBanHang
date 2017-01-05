@@ -1,8 +1,7 @@
 @extends('layouts.new-master')
 @section('content')
 	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
- <!-- ====================================== /loc ket qua theo lua chon================================= -->
-        <!--================================= phan danh muc laptop   =========================================  -->        
+ <!-- ====================================== /loc ket qua theo lua chon================================= -->      
         @foreach($products as $row)
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 no-padding" >
             <div class="thumbnail">          
