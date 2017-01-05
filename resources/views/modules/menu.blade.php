@@ -1,6 +1,6 @@
  <!-- main menu  navbar -->
-    <nav class="navbar navbar-default navbar-top" role="navigation" id="main-Nav" style="background-color: #16a085;margin-bottom: 5px;font-size: 13px;">
-      <div class="container">  
+    <nav class="navbar navbar-default navbar-top" role="navigation" id="main-Nav" style="background-color: #FACC2E;margin-bottom: 5px;font-size: 13px;">
+      <div class="container" style="color: red;">  
         <div class="row">
           <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header">
@@ -18,17 +18,17 @@
                 </span>
           </div>
           <!-- Collect the nav links, forms, and other content for toggling -->
-          <div class="collapse navbar-collapse" id="main-mav-top">
+          <div class="collapse navbar-collapse" id="main-mav-top" style="color: black;"">
             <ul class="nav navbar-nav">
-              <li> <a href="{!!url('')!!}" title="" style="color: #FFFFFF;background-color: #2c3e50;"><b class="glyphicon glyphicon-home"></b> Trang chủ </a> </li>
+              <li> <a href="{!!url('')!!}" title="" style="color: black;"><b class="glyphicon glyphicon-home"></b> TRANG CHỦ </a> </li>
               <li>
-                <a href="{!!url('mobile')!!}" >Điện Thoại </a>                          
+                <a href="{!!url('mobile')!!}" >ĐIỆN THOẠI</a>                          
               </li>                                                  
               <li >
-                <a href="{!!url('laptop')!!}" > Laptop </a>                
+                <a href="{!!url('laptop')!!}" > LAPTOP </a>                
               </li>    
               <li>
-                <a href="{!!url('pc')!!}" > Máy Tính </a>                
+                <a href="{!!url('pc')!!}" > MÁY TÍNH </a>                
               </li>                                          
               <li>
                <a href="{!!url('tin-tuc')!!}" > Tin Tức - Khuyễn Mãi </a>                    
@@ -101,6 +101,11 @@
             </ul>
           </div><!-- /.navbar-collapse -->
         </div> <!-- /row -->
+        <form role="search" style="width: 30%; padding-top: 20px;">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Tìm kiếm ...">
+                  </div>
+        </form> 
       </div><!-- /container -->
     </nav>    <!-- /main nav -->
 
