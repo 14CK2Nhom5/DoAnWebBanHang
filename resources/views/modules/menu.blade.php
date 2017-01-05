@@ -34,6 +34,13 @@
                <a href="{!!url('tin-tuc')!!}" > Tin Tức - Khuyễn Mãi </a>                    
               </li>                                            
             </ul>
+            <ul class="nav navbar-nav pull-right">
+                <form method = 'GET' action = "Search">
+                  <input  placeholder="Tên sản phẩm tìm kiếm ..." type="search" name="key" id="search">
+                  <input type="submit" value="">
+                </form>
+              
+            </ul>
              <ul class="nav navbar-nav pull-right">
               {{-- <li><a href="{{ url('/admin/home') }}">Vào trang quản trị</a></li> --}}
               <li class="dropdown">
@@ -45,7 +52,7 @@
                       <thead>
                       <tr>
                         <th>Ảnh</th>
-                        <th>LS</th>
+                        <th>SL</th>
                         <th>Tên <SPAN></SPAN></th>
                         <th>Giá</th>
                       </tr>
@@ -67,16 +74,8 @@
                   @else
                     <div class="table-responsive">
                      <table class="table table-hover" >
-                      <thead>
-                      <tr>
-                        <th>Ảnh</th>
-                        <th>LS</th>
-                        <th>Tên <SPAN></SPAN></th>
-                        <th>Giá</th>
-                      </tr>
-                    </thead>
                        <tbody>                       
-                        <td colspan="3">Hện đang trống</td>                        
+                        <td colspan="3">Hiện đang trống</td>                        
                        </tbody>                       
                      </table> 
                   </div>
