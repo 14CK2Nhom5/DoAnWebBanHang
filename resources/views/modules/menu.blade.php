@@ -22,7 +22,7 @@
             <ul class="nav navbar-nav">
               <li> <a href="{!!url('')!!}" title="" style="color: black;"><b class="glyphicon glyphicon-home"></b> TRANG CHỦ </a> </li>
               <li>
-                <a href="{!!url('mobile')!!}" >ĐIỆN THOẠIii</a>                          
+                <a href="{!!url('mobile')!!}" >ĐIỆN THOẠI</a>                          
               </li>                                                  
               <li >
                 <a href="{!!url('laptop')!!}" > LAPTOP </a>                
@@ -90,20 +90,14 @@
             </ul>
           </div><!-- /.navbar-collapse -->
         </div> <!-- /row -->
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         <form  method = 'post' action = "timkiem" role="search" style="width: 30%; padding-top: 20px;">
           <input type="hidden" name="_token" value ="{{csrf_token()}}";> 
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Nhập tên sản phẩm tìm kiếm ..." name="tukhoa" id="tukhoa">
             </div>
           </input>
-<<<<<<< HEAD
 
-=======
->>>>>>> origin/master
         </form> 
       </div><!-- /container -->
     </nav>    <!-- /main nav -->
