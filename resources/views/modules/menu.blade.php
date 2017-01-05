@@ -35,9 +35,10 @@
               </li>                                            
             </ul>
             <ul class="nav navbar-nav pull-right">
-                <form method = 'GET' action = "Search">
-                  <input  placeholder="Tên sản phẩm tìm kiếm ..." type="search" name="key" id="search">
-                  <input type="submit" value="">
+                <form method = 'post' action = "timkiem">
+                  <input type="hidden" name="_token" value ="{{csrf_token()}}";> 
+                  <input  placeholder="Tên sản phẩm tìm kiếm ..." type="search" name="tukhoa" id="search">
+                  <input type="submit" value="Tìm kiếm">
                 </form>
               
             </ul>
