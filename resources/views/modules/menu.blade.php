@@ -29,9 +29,6 @@
               </li>    
               <li>
                 <a href="{!!url('pc')!!}" > MÁY TÍNH </a>                
-              </li>                                          
-              <li>
-               <a href="{!!url('tin-tuc')!!}" > Tin Tức - Khuyễn Mãi </a>                    
               </li>                                            
             </ul>           
              <ul class="nav navbar-nav pull-right">
@@ -109,7 +106,6 @@
     <a href="{!!url('mobile')!!}">Điện Thoại</a>
     <a href="{!!url('laptop')!!}">Laptop</a>
     <a href="{!!url('pc')!!}">Máy Tính</a>
-    <a href="{!!url('tin-tuc')!!}">Tin Tức</a>
     <a href="{!!url('gio-hang')!!}"> <span class="glyphicon glyphicon-shopping-cart"><span class="badge">{!!Cart::count()!!}</span></span> Giỏ Hàng </a>     
   </div>
   <!-- /left slider bar nav -->

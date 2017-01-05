@@ -225,8 +225,7 @@
               </div>
               <div class="row">
               <hr>
-              <h2 style="padding-left: 30px;"> Tin tức công nghệ </h2>
-                 @include('modules.tin-tuc') 
+               
               </div><!-- /row -->
             </div>
           </div>   
