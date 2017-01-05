@@ -9,7 +9,7 @@
     <meta name="author" content="">
     <link rel="icon" href="{!!url('images/logo.png')!!}" alt="logo" width="50" height="20">
 
-    <title>Fshop : Hệ thông bán hàng trực tuyến</title>
+    <title>Thế Giới Di Động</title>
 
     <!-- Bootstrap core CSS -->
     <link href="{!!url('bootstrap/css/bootstrap.min.css')!!}" rel="stylesheet">
