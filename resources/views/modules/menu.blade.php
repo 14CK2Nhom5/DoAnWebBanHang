@@ -33,7 +33,15 @@
               <li>
                <a href="{!!url('tin-tuc')!!}" > Tin Tức - Khuyễn Mãi </a>                    
               </li>                                            
-            </ul>           
+            </ul>
+            <ul class="nav navbar-nav pull-right">
+                <form method = 'post' action = "timkiem">
+                  <input type="hidden" name="_token" value ="{{csrf_token()}}";> 
+                  <input  placeholder="Tên sản phẩm tìm kiếm ..." type="search" name="tukhoa" id="search">
+                  <input type="submit" value="Tìm kiếm">
+                </form>
+              
+            </ul>
              <ul class="nav navbar-nav pull-right">
               {{-- <li><a href="{{ url('/admin/home') }}">Vào trang quản trị</a></li> --}}
               <li class="dropdown">
@@ -93,12 +101,19 @@
             </ul>
           </div><!-- /.navbar-collapse -->
         </div> <!-- /row -->
+<<<<<<< HEAD
         <form  method = 'post' action = "timkiem" role="search" style="width: 30%; padding-top: 20px;">
           <input type="hidden" name="_token" value ="{{csrf_token()}}";> 
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Nhập tên sản phẩm tìm kiếm ..." name="tukhoa" id="tukhoa">
             </div>
           </input>
+=======
+        <form role="search" style="width: 30%; padding-top: 20px;">
+                  <div class="form-group">
+                      <input type="text" class="form-control" placeholder="Tìm kiếm ...">
+                  </div>
+>>>>>>> parent of 4e3ecc8... Edit
         </form> 
       </div><!-- /container -->
     </nav>    <!-- /main nav -->
