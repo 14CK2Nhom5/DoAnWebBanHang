@@ -81,7 +81,7 @@
                   </a>
                 </div>                
                   <div class="price">  
-                    <span class="btn btn-info btn-block ">Giá : <strong>{!!$row->price!!}</strong> Đ</span>   
+                    <span class="btn btn-info btn-block ">Giá : <strong>{!!number_format($row->price)!!}</strong> Đ</span>   
                     <a href="{!!url('gio-hang/addcart/'.$row->id)!!}" class="btn btn-success btn-block">Thêm vào giỏ</a> 
                   </div>                  
               </div> 

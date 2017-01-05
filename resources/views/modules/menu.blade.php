@@ -2,7 +2,7 @@
     <nav class="navbar navbar-default navbar-top" role="navigation" id="main-Nav" style="background-color: #FACC2E;margin-bottom: 5px;font-size: 13px;">
       <div class="container" style="color: red;">  
         <div class="row">
-          <!-- Brand and toggle get grouped for better mobile display -->
+          <!-- Brand and toggle get grouped for better mobile displays -->
           <div class="navbar-header">
              <span  class="visible-xs pull-left" style="font-size:30px;cursor:pointer; padding-left: 10px; color: #ecf0f1;" onclick="openNav()">&#9776; </span> 
              <span  class="visible-xs pull-right" style="font-size:20px;cursor:pointer; padding-right: 10px; padding-top: 8px; color: #FFFFFF;" >      
@@ -22,7 +22,7 @@
             <ul class="nav navbar-nav">
               <li> <a href="{!!url('')!!}" title="" style="color: black;"><b class="glyphicon glyphicon-home"></b> TRANG CHỦ </a> </li>
               <li>
-                <a href="{!!url('mobile')!!}" >ĐIỆN THOẠI</a>                          
+                <a href="{!!url('mobile')!!}" >ĐIỆN THOẠIii</a>                          
               </li>                                                  
               <li >
                 <a href="{!!url('laptop')!!}" > LAPTOP </a>                
@@ -33,15 +33,7 @@
               <li>
                <a href="{!!url('tin-tuc')!!}" > Tin Tức - Khuyễn Mãi </a>                    
               </li>                                            
-            </ul>
-            <ul class="nav navbar-nav pull-right">
-                <form method = 'post' action = "timkiem">
-                  <input type="hidden" name="_token" value ="{{csrf_token()}}";> 
-                  <input  placeholder="Tên sản phẩm tìm kiếm ..." type="search" name="tukhoa" id="search">
-                  <input type="submit" value="Tìm kiếm">
-                </form>
-              
-            </ul>
+            </ul>           
              <ul class="nav navbar-nav pull-right">
               {{-- <li><a href="{{ url('/admin/home') }}">Vào trang quản trị</a></li> --}}
               <li class="dropdown">
@@ -101,10 +93,12 @@
             </ul>
           </div><!-- /.navbar-collapse -->
         </div> <!-- /row -->
-        <form role="search" style="width: 30%; padding-top: 20px;">
-                  <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Tìm kiếm ...">
-                  </div>
+        <form  method = 'post' action = "timkiem" role="search" style="width: 30%; padding-top: 20px;">
+          <input type="hidden" name="_token" value ="{{csrf_token()}}";> 
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nhập tên sản phẩm tìm kiếm ..." name="tukhoa" id="tukhoa">
+            </div>
+          </input>
         </form> 
       </div><!-- /container -->
     </nav>    <!-- /main nav -->

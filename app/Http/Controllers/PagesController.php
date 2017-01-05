@@ -195,4 +195,10 @@ class PagesController extends Controller
             return redirect()->route('index');
         }
     }
+    function timkiem(Request $request)
+    {
+        $tukhoa = $request->tukhoa;
+        $sanpham = Products::where('name','like',"%$tukhoa%")->orWhere('slug','like',"%$tukhoa%")->orWhere('intro','like',"%$tukhoa%")->orWhere('price','like',"%$tukhoa%")->orWhere('r_intro','like',"%$tukhoa%")->paginate(12);
+        return view ('category.timkiem',['products'=>$sanpham,'tukhoa'=>$tukhoa]);
+    }
 }

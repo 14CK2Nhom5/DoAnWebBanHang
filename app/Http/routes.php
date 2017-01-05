@@ -99,3 +99,6 @@ Route::group(['middleware' => 'admin'], function () {
       // ---------------van de khac ----------------------
     });     
 });
+
+
+Route:: post('timkiem', 'PagesController@timkiem');
