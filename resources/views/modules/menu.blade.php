@@ -93,25 +93,12 @@
             </ul>
           </div><!-- /.navbar-collapse -->
         </div> <!-- /row -->
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> origin/master
         <form  method = 'post' action = "timkiem" role="search" style="width: 30%; padding-top: 20px;">
           <input type="hidden" name="_token" value ="{{csrf_token()}}";> 
             <div class="form-group">
                 <input type="text" class="form-control" placeholder="Nhập tên sản phẩm tìm kiếm ..." name="tukhoa" id="tukhoa">
             </div>
           </input>
-<<<<<<< HEAD
-=======
-        <form role="search" style="width: 30%; padding-top: 20px;">
-                  <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Tìm kiếm ...">
-                  </div>
->>>>>>> parent of 4e3ecc8... Edit
-=======
->>>>>>> origin/master
         </form> 
       </div><!-- /container -->
     </nav>    <!-- /main nav -->
