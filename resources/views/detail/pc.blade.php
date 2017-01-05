@@ -182,10 +182,7 @@
                 </div>
               </div>
               <div class="row">
-                <hr>
-                <h2 style="padding-left: 20px;"><small>Tin tức mới</small></h2>
-                <hr>
-                 @include('modules.tin-tuc')  
+                  
                  
               </div><!-- /row -->
             </div>

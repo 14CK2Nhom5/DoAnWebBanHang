@@ -186,10 +186,10 @@
         <h3 class="panel-title">Fans Pages</h3>
       </div>
       <div class="panel-body">
-        Hãy <a href="#" title="">Like</a> facebook của Gshop để cập nhật tin mới nhất
+        Hãy <a href="#" title="">Like</a> facebook của TGDD để cập nhật tin mới nhất
       </div>
     </div> <!-- /fan pages myweb -->        
   </div> 
 </div>
-<!-- ===================================================================================/news ============================== -->
+
 @endsection
